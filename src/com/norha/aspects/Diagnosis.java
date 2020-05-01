@@ -16,7 +16,7 @@ public class Diagnosis {
 		System.out.println("target Advice");
 	}
 
-	@Pointcut("this(com.norha.cars.Machine)")
+	@Pointcut("this(com.norha.cars.PertolCar)")
 	public void thisPointcut() {
 	}
 
