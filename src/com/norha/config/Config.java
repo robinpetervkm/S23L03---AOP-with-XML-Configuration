@@ -11,7 +11,11 @@ import com.norha.cars.PertolCar;
 import com.norha.service.Cars;
 
 @Configuration
-@EnableAspectJAutoProxy// here this proxy object is crated of type Machine Interface
+@EnableAspectJAutoProxy(proxyTargetClass = true) /*
+													 * here insted of this proxy object is crated of type Machine
+													 * Interface we explicitly tell to make the poxy for target class
+													 * PertolCar
+													 */
 public class Config {
 	
 	@Bean("electricCar")
