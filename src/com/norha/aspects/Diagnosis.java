@@ -7,7 +7,7 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class Diagnosis {
 
-	@Pointcut("bean(petrolCar)")
+	@Pointcut("bean(*Ca*)")
 	public void beanPointcut() {
 	}
 
