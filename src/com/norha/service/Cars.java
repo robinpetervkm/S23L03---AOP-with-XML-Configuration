@@ -3,6 +3,7 @@ package com.norha.service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.norha.cars.ElectricCar;
+import com.norha.cars.PertolCar;
 
 public class Cars {
 	

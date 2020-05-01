@@ -1,4 +1,4 @@
-package com.norha.service;
+package com.norha.cars;
 
 public class PertolCar {
 
