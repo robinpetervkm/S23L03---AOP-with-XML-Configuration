@@ -17,6 +17,8 @@ public class Diagnosis {
 	
 	/* @Pointcut("execution( * com.norha.cars.*.run(..))") */
 	
+	/* @Pointcut("execution( public * com.norha.cars.*.run(..))") */
+	
 	 @Pointcut("execution( * com.norha.cars.*.*(..))") 
 	public void run() {
 	}
