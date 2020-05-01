@@ -7,19 +7,7 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class Diagnosis {
 
-	/* @Pointcut("execution(void com.norha.cars.PertolCar.run())") */
-
-	/* @Pointcut("execution(void com.norha.cars.PertolCar.run(*))") */
-
-	/* @Pointcut("execution(void com.norha.cars.PertolCar.run(*,*))") */
-
-	/* @Pointcut("execution( * com.norha.cars.PertolCar.run(..))") */
-	
-	/* @Pointcut("execution( * com.norha.cars.*.run(..))") */
-	
-	/* @Pointcut("execution( public * com.norha.cars.*.run(..))") */
-	
-	 @Pointcut("execution( * com.norha.cars.*.*(..))") 
+	 @Pointcut("within(com.norha.cars.*)") 
 	public void run() {
 	}
 

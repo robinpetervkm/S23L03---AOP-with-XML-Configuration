@@ -13,7 +13,7 @@ public class App {
 		Cars car = context.getBean("cars",Cars.class);
 		/* car.getPertolCar().run("Robin"); */
 		
-		car.getElectricCar().stop("STOP"); 
+		car.getPertolCar().stop("STOP"); 
 		
 		context.close();
 	}
