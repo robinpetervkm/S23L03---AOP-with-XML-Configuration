@@ -11,9 +11,8 @@ public class App {
 		AnnotationConfigApplicationContext context = 
 				new AnnotationConfigApplicationContext(Config.class);
 		Cars car = context.getBean("cars",Cars.class);
-		/* car.getPertolCar().run("Robin"); */
 		
-		car.getPertolCar().stop("STOP"); 
+		car.getPertolCar().run(100); 
 		
 		context.close();
 	}
