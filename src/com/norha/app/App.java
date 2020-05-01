@@ -11,12 +11,11 @@ public class App {
 		AnnotationConfigApplicationContext context = 
 				new AnnotationConfigApplicationContext(Config.class);
 		Cars car = context.getBean("cars",Cars.class);
+		/* car.getPertolCar().run("Robin"); */
+		
+		car.getElectricCar().stop("STOP"); 
+		
 		context.close();
-		try {
-			car.getElectricCar().run();
-		} catch (Exception e) {
-			System.out.println("Cought the Exception "+e.getMessage());
-		}
 	}
-
 }
+ 
