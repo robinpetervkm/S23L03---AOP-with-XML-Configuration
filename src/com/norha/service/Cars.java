@@ -1,10 +1,17 @@
 package com.norha.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import com.norha.cars.ElectricCar;
 
 public class Cars {
-	private ElectricCar electricCar = new ElectricCar();
-	private PertolCar pertolCar = new PertolCar();
+	
+	@Autowired
+	private ElectricCar electricCar;
+	
+	@Autowired
+	private PertolCar pertolCar;
+	
 	public ElectricCar getElectricCar() {
 		return electricCar;
 	}

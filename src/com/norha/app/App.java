@@ -1,13 +1,17 @@
 package com.norha.app;
 
-import com.norha.diagnosis.Diagnosis;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.norha.config.Config;
 import com.norha.service.Cars;
 
 public class App {
 	public static void main(String[] args) {
-		Cars car = new Cars();
-		Diagnosis diagnosis = new Diagnosis();
-		diagnosis.engin();
+		
+		AnnotationConfigApplicationContext context = 
+				new AnnotationConfigApplicationContext(Config.class);
+		Cars car = context.getBean("cars",Cars.class);
+		context.close();
 		car.getElectricCar().run();
 	}
 
