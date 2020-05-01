@@ -8,7 +8,7 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class Diagnosis {
 
-	 @Pointcut("target(com.norha.cars.PertolCar)") 
+	 @Pointcut("target(com.norha.cars.Machine)") 
 	public void targetPointcut() {
 	}
 
