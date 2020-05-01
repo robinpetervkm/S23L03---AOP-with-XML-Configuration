@@ -7,13 +7,19 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class Diagnosis {
 
-	@Pointcut("within(@org.springframework.stereotype.Component com.norha.cars.*)")
-	public void withInPointcut() {
+	/*
+	 * @Pointcut("") public void targetPointcut() { }
+	 * 
+	 * @Before("targetPointcut()") public void targetAdvice() {
+	 * System.out.println("@target Advice "); }
+	 */
+	@Pointcut("@annotation(Deprecated)")
+	public void annotationPointcut() {
 	}
-
-	@Before("withInPointcut()")
-	public void withInAdvice() {
-		System.out.println("withIn Advice giving restriction using @Component");
+	
+	@Before("annotationPointcut()")
+	public void annotationAdvice() {
+		System.out.println("@annotation Advice ");
 	}
 
 
