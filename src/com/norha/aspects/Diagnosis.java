@@ -7,13 +7,13 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class Diagnosis {
 
-	@Pointcut("bean(*Ca*)")
-	public void beanPointcut() {
+	@Pointcut("within(@org.springframework.stereotype.Component com.norha.cars.*)")
+	public void withInPointcut() {
 	}
 
-	@Before("beanPointcut()")
-	public void beanAdvice() {
-		System.out.println("Bean Advice");
+	@Before("withInPointcut()")
+	public void withInAdvice() {
+		System.out.println("withIn Advice giving restriction using @Component");
 	}
 
 
