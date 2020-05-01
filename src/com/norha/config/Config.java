@@ -6,11 +6,12 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 import com.norha.aspects.Diagnosis;
 import com.norha.cars.ElectricCar;
+import com.norha.cars.Machine;
 import com.norha.cars.PertolCar;
 import com.norha.service.Cars;
 
 @Configuration
-@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy// here this proxy object is crated of type Machine Interface
 public class Config {
 	
 	@Bean("electricCar")
@@ -19,7 +20,7 @@ public class Config {
 	}
 	
 	@Bean("petrolCar")
-	PertolCar petrolCar() {
+	Machine petrolCar() {
 		return new PertolCar();
 	}
 	

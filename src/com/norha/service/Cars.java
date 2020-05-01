@@ -3,7 +3,7 @@ package com.norha.service;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.norha.cars.ElectricCar;
-import com.norha.cars.PertolCar;
+import com.norha.cars.Machine;
 
 public class Cars {
 	
@@ -11,7 +11,7 @@ public class Cars {
 	private ElectricCar electricCar;
 	
 	@Autowired
-	private PertolCar pertolCar;
+	private Machine pertolCar;
 	
 	public ElectricCar getElectricCar() {
 		return electricCar;
@@ -19,10 +19,10 @@ public class Cars {
 	public void setElectricCar(ElectricCar electricCar) {
 		this.electricCar = electricCar;
 	}
-	public PertolCar getPertolCar() {
+	public Machine getPertolCar() {
 		return pertolCar;
 	}
-	public void setPertolCar(PertolCar pertolCar) {
+	public void setPertolCar(Machine pertolCar) {
 		this.pertolCar = pertolCar;
 	}
 
