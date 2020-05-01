@@ -17,7 +17,7 @@ public class Diagnosis {
 	public void withinPointcut() {
 	}
 
-	@Before("annotationPointcut() && withinPointcut()")
+	@Before("!annotationPointcut() && withinPointcut()")
 	public void CombinationAdvice() {
 		System.out.println("Combination Advice ");
 	}
