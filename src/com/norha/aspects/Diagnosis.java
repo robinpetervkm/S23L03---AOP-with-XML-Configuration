@@ -7,22 +7,14 @@ import org.aspectj.lang.annotation.Pointcut;
 @Aspect
 public class Diagnosis {
 
-	@Pointcut("target(com.norha.cars.Machine)")
-	public void targetPointcut() {
+	@Pointcut("bean(petrolCar)")
+	public void beanPointcut() {
 	}
 
-	@Before("targetPointcut()")
-	public void targetAdvice() {
-		System.out.println("target Advice");
+	@Before("beanPointcut()")
+	public void beanAdvice() {
+		System.out.println("Bean Advice");
 	}
 
-	@Pointcut("this(com.norha.cars.PertolCar)")
-	public void thisPointcut() {
-	}
-
-	@Before("thisPointcut()")
-	public void thisAdvice() {
-		System.out.println("this Advice");
-	}
 
 }
