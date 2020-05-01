@@ -3,6 +3,7 @@ package com.norha.aspects;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
 public class Diagnosis {
@@ -14,14 +15,16 @@ public class Diagnosis {
 	 * @After("execution(void com.norha.cars.PerolCar.run())") public void
 	 * pertolEnginAfter() { System.out.println("Montering Pertol Engin"); }
 	 */
-	@Before("execution(void com.norha.cars.ElectricCar.run())")
+	@Before("run()")
 	public void electricEnginBefore() {
 		System.out.println("Checking Electric Engin");
 	}
 
-	@After("execution(void com.norha.cars.ElectricCar.run())")
+	@After("run()")
 	public void electricEnginAfter() {
 		System.out.println("Montering Electric Engin");
 	}
 
+	@Pointcut("execution(void com.norha.cars.ElectricCar.run())")
+	public void run() {}
 }
