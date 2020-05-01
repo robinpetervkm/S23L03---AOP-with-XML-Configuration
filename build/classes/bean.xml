@@ -11,8 +11,8 @@ http://www.springframework.org/schema/aop http://www.springframework.org/schema/
    
    <aop:config>
 		<aop:aspect ref="aspect">
-			<aop:before method="advice"
-				pointcut="execution(void com.norha.spring.App.later())"/>
+			<aop:before method="advice"	pointcut-ref="pointCut"/>
+			<aop:pointcut expression="execution(void com.norha.spring.App.later())" id="pointCut"/>
 		</aop:aspect>
    </aop:config>
 
