@@ -2,7 +2,7 @@ package com.norha.app;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.norha.cars.Machine;
+import com.norha.cars.ElectricCar;
 import com.norha.config.Config;
 
 public class App {
@@ -11,9 +11,9 @@ public class App {
 		AnnotationConfigApplicationContext context = 
 				new AnnotationConfigApplicationContext(Config.class);
 		
-		Machine machine = context.getBean("petrolCar",Machine.class);
+		ElectricCar electricCar = context.getBean("electricCar",ElectricCar.class);
 		
-		machine.run(); 
+		electricCar.run(); 
 		
 		context.close();
 	} 
