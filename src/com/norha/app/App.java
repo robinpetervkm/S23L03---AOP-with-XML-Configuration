@@ -12,7 +12,11 @@ public class App {
 				new AnnotationConfigApplicationContext(Config.class);
 		Cars car = context.getBean("cars",Cars.class);
 		context.close();
-		car.getElectricCar().run();
+		try {
+			car.getElectricCar().run();
+		} catch (Exception e) {
+			System.out.println("Cought the Exception "+e.getMessage());
+		}
 	}
 
 }
