@@ -10,6 +10,5 @@ public interface Machine {
 
 	String run(String msg);
 
-	String stop(String msg);
 
 }

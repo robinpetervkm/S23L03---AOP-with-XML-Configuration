@@ -23,7 +23,7 @@ public class PertolCar implements Machine {
 		System.out.println("Message : "+msg);
 		return msg;
 	}
-	@Override
+
 	public String stop(String msg) {
 		System.out.println("Message : "+msg);
 		return msg;
