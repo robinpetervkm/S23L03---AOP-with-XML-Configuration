@@ -6,5 +6,14 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
 http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
    <bean id="app" class="com.norha.spring.App"/>
+   
+   <bean id="aspect" class="com.norha.aspect.Aspect"/>
+   
+   <aop:config>
+		<aop:aspect ref="aspect">
+			<aop:before method="advice"
+				pointcut="execution(void com.norha.spring.App.later())"/>
+		</aop:aspect>
+   </aop:config>
 
 </beans>
