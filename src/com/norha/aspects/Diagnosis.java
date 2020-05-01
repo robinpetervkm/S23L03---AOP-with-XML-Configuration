@@ -1,4 +1,4 @@
-package com.norha.diagnosis;
+package com.norha.aspects;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;

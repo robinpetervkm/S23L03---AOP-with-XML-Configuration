@@ -4,9 +4,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
+import com.norha.aspects.Diagnosis;
 import com.norha.cars.ElectricCar;
 import com.norha.cars.PertolCar;
-import com.norha.diagnosis.Diagnosis;
 import com.norha.service.Cars;
 
 @Configuration
