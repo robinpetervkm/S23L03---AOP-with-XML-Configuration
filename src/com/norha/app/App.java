@@ -12,7 +12,7 @@ public class App {
 				new AnnotationConfigApplicationContext(Config.class);
 		Cars car = context.getBean("cars",Cars.class);
 		
-		car.getPertolCar().run(100); 
+		car.getPertolCar().run(100,50); 
 		
 		context.close();
 	}
