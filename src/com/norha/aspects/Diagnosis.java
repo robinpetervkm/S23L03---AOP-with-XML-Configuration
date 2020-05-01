@@ -2,6 +2,7 @@ package com.norha.aspects;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -30,7 +31,7 @@ public class Diagnosis {
 	 * System.out.println("Montering Electric Engin"); }
 	 */
 	
-	@AfterReturning("run()")
+	@AfterThrowing("run()")
 	public void electricEnginAfter() {
 		System.out.println("Montering Electric Engin");
 	}
